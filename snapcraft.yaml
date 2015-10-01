@@ -1,0 +1,16 @@
+name: dnx-sample
+version: 1.0
+vendor: Thomas Conte <tconte@microsoft.com>
+summary: .NET Core example Snap
+description: Runs .NET Core Hello World
+icon: icon.png
+binaries:
+  hellodnx:
+    exec: dnxapp/DNXHelloWorld
+
+parts:
+  dnxsample:
+    plugin: make-project
+    source: dnxhelloworld
+    stage-packages:
+      - libunwind8
